@@ -8,7 +8,7 @@ const testResults = [
 const totalTestCount = testResults.length;
 
 // 2a. Filter test results to show only failed tests
-//console.log(testResults.filter(testStatus => testStatus.status === 'passed'));
+console.log(testResults.filter(testStatus => testStatus.status === 'passed'));
 
 //2b. Calculate test statistics (pass rate, average duration, etc.)
 let totalDuration = testResults.reduce((sum, current) => sum + current.duration, 0);
