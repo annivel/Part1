@@ -6,12 +6,19 @@ function createCounter(n: number): () => number {
 }
 
 //2665. Counter II
+/*
+type Counter = { ... } creates a type alias that describes the shape/structure of an object. 
+It's a compile-time contract. In Java, this is equivalent to an interface"
+*/
 type Counter = {
   increment: () => number;
   decrement: () => number;
   reset: () => number;
 };
 
+/*The Counter type ensures that createCounter2() returns an object with those all specific methods in Counter. 
+Any missing method or wrong return type will cause a compile error.
+*/
 function createCounter2(init: number): Counter {
   const defaulCounter = init;
   return {
